@@ -1,0 +1,12 @@
+version: "3.9"  # optional since v1.27.0
+services:
+  server:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      - PORT=8080
+      - NODE_ENV=development
+      - MONGO_DB_CONNECTION_STRING=mongodb+srv://mikkl20:EvNczdui9QIGMpuG@cloudassignment.e0xvfrw.mongodb.net/?retryWrites=true&w=majority
+      - MONGO_DB_NAME=CloudAssignment
+      - REDIS_URI=rediss://default:AVNS_RnhWzIcOwAQPSXLufPV@redis-2bf3381b-priisholmlarsen-3e02.aivencloud.com:23237

@@ -1,0 +1,18 @@
+version: "3.9"  # optional since v1.27.0
+services:
+  frontend:
+    build: ./Frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+  backend:
+    build: ./Backend
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+      - NODE_ENV=value
+      - MONGO_DB_CONNECTION_STRING=mongodb+srv://mikkl20:EvNczdui9QIGMpuG@cloudassignment.e0xvfrw.mongodb.net/?retryWrites=true&w=majority
+      - MONGO_DB_NAME=>CloudAssignment
+      - REDIS_URI=rediss://default:AVNS_RnhWzIcOwAQPSXLufPV@redis-2bf3381b-priisholmlarsen-3e02.aivencloud.com:23237
