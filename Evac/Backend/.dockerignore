@@ -1,7 +1,0 @@
-node_modules
-dist
-.dockerignore
-.gitignore
-docker-compose.yml
-Dockerfile
-Dockerfile.prod
